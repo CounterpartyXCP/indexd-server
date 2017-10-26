@@ -23,7 +23,9 @@ forever index.js
 
 ## API Example
 Once the server is running, you can call an API like this:
-`http://localhost:{SERVER_PORT}/a/2N6Zt9392GjJDpx82JWNoYvXDMjVvRYDksL/utxos`
+```
+http://localhost:{SERVER_PORT}/a/2N6Zt9392GjJDpx82JWNoYvXDMjVvRYDksL/utxos
+```
 
 And receive a response like this:
 ```json
