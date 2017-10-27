@@ -1,4 +1,7 @@
-require('dotenv').load()
+// dotenv at CONFIG_FILE or .env
+let dotenv = require('dotenv')
+require('dotenv').load({path: process.env.CONFIG_FILE ? process.env.CONFIG_FILE : '.env'})
+
 let TESTNET = (process.env.TESTNET === '1' || process.env.TESTNET.toLowerCase() === 'true')
 
 let debug = require('debug')('index')
