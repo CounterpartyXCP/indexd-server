@@ -14,7 +14,7 @@ Your bitcoin server must have [ZMQ enabled](https://github.com/bitcoin/bitcoin/b
 You can specify a custom configuration file by setting the `CONFIG_FILE` environment variable to your environment config path.
 
 ## Run the server
-The reccomended way to run the server is with [forever](https://www.npmjs.com/package/forever).
+The recommended way to run the server is with [forever](https://www.npmjs.com/package/forever).
 
 ```shell
 npm -g install forever
