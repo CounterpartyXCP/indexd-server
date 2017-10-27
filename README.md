@@ -32,19 +32,17 @@ And receive a response like this:
 ```json
 [
     {
-        "amount": 0.000593,
-        "confirmations": 48639,
-        "height": 1162483,
-        "txid": "0b3c631c032c0b6923f35f80a3793024179ad04c4f766a9f3067eb1d3efb5de6",
+        "txId": "0b3c631c032c0b6923f35f80a3793024179ad04c4f766a9f3067eb1d3efb5de6",
+        "vout": 1,
         "value": 59300,
-        "vout": 1
+        "height": 1162483,
+        "confirmations": 48639
     },
     {
-        "amount": 0.1,
-        "confirmations": 0,
-        "txid": "24a6ec05e3edcd46c394c35d8bf47f69d3f626bd819f25c5a2a62de8ebc64827",
+        "txId": "24a6ec05e3edcd46c394c35d8bf47f69d3f626bd819f25c5a2a62de8ebc64827",
+        "vout": 1,
         "value": 10000000,
-        "vout": 1
+        "confirmations": 0
     }
 ]
 ```
