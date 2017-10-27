@@ -11,10 +11,10 @@ Copy `.env-example` to `.env` and modify the `.env` file as needed.
 
 Your bitcoin server must have [ZMQ enabled](https://github.com/bitcoin/bitcoin/blob/master/doc/zmq.md).  
 
-You can specify a custom configuration file by setting the `CONFIG_FILE` environmanet variable to your environment config path.
+You can specify a custom configuration file by setting the `CONFIG_FILE` environment variable to your environment config path.
 
 ## Run the server
-The reccomended way to run the server is with (forever)[https://www.npmjs.com/package/forever].
+The reccomended way to run the server is with [forever](https://www.npmjs.com/package/forever).
 
 ```shell
 npm -g install forever
