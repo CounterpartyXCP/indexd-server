@@ -7,14 +7,30 @@ A [bitcoind](https://github.com/bitcoin/bitcoin) transaction server.
 This server provides an API for unspent transaction outputs for bitcoin addresses.  
 
 ## Configuration
-Copy `.env-example` to `.env` and modify the `.env` file as needed.
 
-Your bitcoin server must have [ZMQ enabled](https://github.com/bitcoin/bitcoin/blob/master/doc/zmq.md).  
+### .env file
+Copy `.env-example` to `.env` and modify the `.env` file as needed.  To use a custom configuration file, you can specify a file path by setting the `CONFIG_FILE` environment variable to the location of your environment config path.
 
-You can specify a custom configuration file by setting the `CONFIG_FILE` environmanet variable to your environment config path.
+
+### bitcoin.conf configuration
+Your bitcoin server must have [ZMQ enabled](https://github.com/bitcoin/bitcoin/blob/master/doc/zmq.md).  Then configure `bitcoin.conf` to publish tx and block hashes, like so:
+
+```
+zmqpubhashtx=tcp://127.0.0.1:38832
+zmqpubhashblock=tcp://127.0.0.1:38832
+```
+
+The settings in bitcoin.conf are the "server" settings for the ZMQ publisher.  The ZMQ variable in the `.env` file is the "client" to subscribe to the messages published by bitcoin.
+
+
+## Install
+Install the node dependencies:
+```shell
+npm install
+```
 
 ## Run the server
-The reccomended way to run the server is with (forever)[https://www.npmjs.com/package/forever].
+The recommended way to run the server is with [forever](https://www.npmjs.com/package/forever).
 
 ```shell
 npm -g install forever
@@ -46,5 +62,21 @@ And receive a response like this:
     }
 ]
 ```
+
+To check on the status of the index while it is syncing, you can call:
+```
+http://localhost:{SERVER_PORT}/status
+```
+
+And receive a response like this:
+```json
+{
+    "chainBlock": 1211187,
+    "indexBlock": 11274,
+    "blocksBehind": 1199913,
+    "ready": false
+}
+```
+
 
 ## License [MIT](LICENSE)
