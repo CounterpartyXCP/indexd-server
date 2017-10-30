@@ -9,7 +9,7 @@ This server provides an API for unspent transaction outputs for bitcoin addresse
 ## Configuration
 
 ### .env file
-Copy `.env-example` to `.env` and modify the `.env` file as needed.  To use a custom configuration file, you can specify a file path by setting the `CONFIG_FILE` environment variable to the location of your environment config path. 
+Copy `.env-example` to `.env` and modify the `.env` file as needed.  To use a custom configuration file, you can specify a file path by setting the `CONFIG_FILE` environment variable to the location of your environment config path.
 
 
 ### bitcoin.conf configuration
