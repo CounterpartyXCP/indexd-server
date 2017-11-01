@@ -13,7 +13,7 @@ Copy `.env-example` to `.env` and modify the `.env` file as needed.  To use a cu
 
 
 ### bitcoin.conf configuration
-Your bitcoin server must have [ZMQ enabled](https://github.com/bitcoin/bitcoin/blob/master/doc/zmq.md).  Then configure `bitcoin.conf` to publish tx and block hashes, like so:
+Your bitcoin server must have [ZMQ enabled](https://github.com/bitcoin/bitcoin/blob/master/doc/zmq.md).  You can configure `bitcoin.conf` to publish tx and block hashes, like so:
 
 ```
 zmqpubhashtx=tcp://127.0.0.1:38832
