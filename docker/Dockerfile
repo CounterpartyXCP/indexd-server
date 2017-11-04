@@ -19,6 +19,7 @@ RUN mkdir -p /data/indexd/
 RUN mkdir /indexd
 WORKDIR /indexd
 RUN git clone https://github.com/CounterpartyXCP/indexd-server.git /indexd
+RUN npm install
 
 # start script
 COPY ./start.sh /usr/local/bin/start.sh
