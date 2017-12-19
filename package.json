@@ -12,7 +12,7 @@
     "bitcoinjs-lib": "^3.3.1",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
-    "indexd": "git://github.com/bitcoinjs/indexd.git#21337134a165ed8ac7b342e0dc96f3dd09b09f65",
+    "indexd": "=0.8.13",
     "leveldown": "^1.6.0",
     "qup": "^1.2.1",
     "run-parallel": "^1.1.6",
