@@ -21,7 +21,7 @@ service((err, adapter) => {
 
   // start the API server
   debug('starting API server')
-  app.use(api(adapter, {testnet: TESTNET}))
+  app.use(api(adapter, {testnet: TESTNET || REGTEST}))
   app.listen(process.env.SERVER_PORT);
   debug("App listening on port "+process.env.SERVER_PORT);
 })
