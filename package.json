@@ -4,6 +4,8 @@
   "description": "Bitcoin address index service",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Counterparty Developers",
@@ -18,5 +20,8 @@
     "run-parallel": "^1.1.6",
     "yajrpc": "^1.4.4",
     "zmq": "^2.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
