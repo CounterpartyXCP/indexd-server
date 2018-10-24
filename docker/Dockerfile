@@ -4,7 +4,7 @@ MAINTAINER Counterparty Developers <dev@counterparty.io>
 
 # Install newest stable nodejs and npm
 RUN apt-get update && apt-get -y remove nodejs npm gyp
-RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 RUN apt-get update && apt-get -y install nodejs
 RUN echo "Using nodejs version `nodejs --version` and npm version `npm --version`"
 
