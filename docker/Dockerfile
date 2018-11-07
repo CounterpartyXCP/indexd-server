@@ -1,8 +1,10 @@
-FROM node:carbon-alpine
+FROM node:carbon
 
 MAINTAINER Counterparty Developers <dev@counterparty.io>
 
-RUN apk add --update bash git zeromq-dev gcc g++ python build-base libexecinfo-dev
+RUN apt update
+RUN apt install -y libzmq3-dev gcc g++ python3 build-essential
+
 
 # install counterparty-indexd
 RUN mkdir -p /data/indexd/
