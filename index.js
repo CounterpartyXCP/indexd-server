@@ -17,6 +17,13 @@ let api = require('./lib/express')
 
 let app = express()
 
+let cors = require('cors')
+if (process.env.CORS === '*') {
+  app.use(cors())
+} else if (process.env.CORS) {
+  app.use(cors({ origin: process.env.CORS }))
+}
+
 // run the service
 debug(`Initializing blockchain connection${["", " (for testnet)", " (for regtest)"][(TESTNET?1:0)+(REGTEST?2:0)]}`)
 service((err, adapter) => {
