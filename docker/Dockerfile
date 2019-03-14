@@ -21,7 +21,7 @@ COPY index.js /indexd
 COPY ./docker/start.sh /usr/local/bin/start.sh
 RUN chmod a+x /usr/local/bin/start.sh
 
-EXPOSE 8432 18432
+EXPOSE 8432 18432 28432
 
 # start indexd
 CMD ["npm", "start"]
