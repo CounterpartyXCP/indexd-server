@@ -33,7 +33,7 @@ service((err, adapter) => {
 
   // start the API server
   debug('starting API server')
-  app.use(api(adapter, {testnet: TESTNET, regtest: REGTEST}))
+  app.use(api(adapter, {testnet: TESTNET, regtest: REGTEST, custom: process.env.CUSTOM}))
   app.listen(process.env.SERVER_PORT);
   debug("App listening on port "+process.env.SERVER_PORT);
 })
