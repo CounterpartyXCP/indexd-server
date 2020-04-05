@@ -164,5 +164,10 @@ And receive a response like this:
 }
 ```
 
+## Troubleshooting
 
-## License [MIT](LICENSE)
+Edit `.env`, set debug options and restart indexd.  For example, to debug problems related to data synchronization with the blockchain service, add `blockchain` category to `DEBUG` options.  Use `*` to output all debugging information (zmq, express, mempool, etc.).
+
+## License
+
+[MIT](LICENSE)
